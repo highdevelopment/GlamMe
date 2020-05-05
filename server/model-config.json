@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "glamme",
+    "public": false,
+    "relations": {
+      "Accounts": {
+        "type": "belongsTo",
+        "model": "Accounts",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "glamme",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Accounts": {
+    "dataSource": "glamme",
+    "public": true
+  },
+  "room": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Store": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "games": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Reservation": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "UserLog": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Notices": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "GameLogs": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Course": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": false
+  },
+  "SubCourse": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "MotionVideo": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Question": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "CashLog": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Event": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Verification": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "CustomerService": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "ManualData": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "PhotoZone": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "AccessLogs": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "AppNotify": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "card": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "GameConstants": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "MotionChat": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "MotionLike": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "RoomLogs": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "GameData": {
+    "dataSource": "glamme",
+    "public": false
+  },
+  "Contest": {
+    "dataSource": "glamme",
+    "public": false
+  }
+}

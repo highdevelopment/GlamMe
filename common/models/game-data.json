@@ -1,0 +1,42 @@
+{
+  "name": "GameData",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "createdAt": {
+      "type": "date",
+      "required": true
+    },
+    "playerId": {
+      "type": "string",
+      "description": "플레이어아이디, 비로그인 사용자는 없음"
+    },
+    "gameId": {
+      "type": "string",
+      "required": true,
+      "description": "게임아이디"
+    },
+    "gameLogId": {
+      "type": "string",
+      "required": true,
+      "description": "게임로그아이디"
+    },
+    "holeIndex": {
+      "type": "number",
+      "required": false,
+      "description": "홀번호"
+    },
+    "data": {
+      "type": "object",
+      "required": false,
+      "description": "게임내용"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

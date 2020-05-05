@@ -1,0 +1,40 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "glamme": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "glamme",
+    "username": "",
+    "password": "",
+    "name": "GlamMe",
+    "connector": "mongodb"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./storage",
+    "maxFileSize": "5000000000",
+    "nameConflict": "makeUnique"
+  },
+  "storage_mongo": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "glamme",
+    "username": "",
+    "password": "",
+    "name": "storage_mongo",
+    "connector": "mongodb"
+  },
+  "storage_s3": {
+    "name": "storage_s3",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "keyId": "AKIAYCWMDJKKWRSZVHF5",
+    "key": "aFlTsU14UlzjQ59jbu67TcjJL6K06xyuI7kaj+nK",
+    "acl": "public-read"
+  }
+}

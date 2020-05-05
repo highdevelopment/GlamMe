@@ -1,0 +1,113 @@
+{
+  "name": "Contest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "password": {
+      "type": "string",
+      "required": true,
+      "description": "비밀번호"
+    },
+    "qualification": {
+      "type": [
+        "boolean"
+      ],
+      "required": true,
+      "description": "참가대상 (참가자격지정)"
+    },
+    "isAllowPartner": {
+      "type": "boolean",
+      "required": true,
+      "default": false,
+      "description": "동반라운드 (대회참가자격이 없는 사람의 동반 라운드를 허용합니다.)"
+    },
+    "limitEnter": {
+      "type": "number",
+      "required": true,
+      "default": -1,
+      "description": "참여가능횟수"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "대회명"
+    },
+    "description": {
+      "type": "string",
+      "description": "대회소개"
+    },
+    "course": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "description": "코스아이디목록"
+    },
+    "startAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now",
+      "description": "대회기간시작"
+    },
+    "endAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now",
+      "description": "대회기간끝"
+    },
+    "option": {
+      "type": "object",
+      "required": true,
+      "description": "경기조건"
+    },
+    "conditions": {
+      "type": "object",
+      "required": true,
+      "description": "추가조건 (플러스상품사용, 매트룰사용, 롱기스트"
+    },
+    "revision": {
+      "type": "object",
+      "required": true,
+      "description": "스코어보정"
+    },
+    "award": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "description": "시상내역"
+    },
+    "photo": {
+      "type": "string",
+      "required": false,
+      "description": "대회이미지"
+    },
+    "banner": {
+      "type": "string",
+      "required": false,
+      "description": "홈페이지 내노출 이미지"
+    },
+    "html_guidline": {
+      "type": "string",
+      "required": false,
+      "description": "대회요강"
+    },
+    "createdAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now"
+    },
+    "modifiedAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
